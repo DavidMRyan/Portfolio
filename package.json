@@ -1,0 +1,26 @@
+{
+  "name": "portfoliowebsite",
+  "version": "1.0.0",
+  "description": "A website for my portfolio. [CHANGE LATER]",
+  "main": "src/index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidMRyan/PortfolioWebsite.git"
+  },
+  "author": "David Ryan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DavidMRyan/PortfolioWebsite/issues"
+  },
+  "homepage": "https://github.com/DavidMRyan/PortfolioWebsite#readme"
+}
