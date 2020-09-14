@@ -1,35 +1,17 @@
-const express = require("express");
-const path = require("path");
-const HomeController = require("../src/controllers/home");
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-class App
-{
-	/**
-	 * Express application constructor
-	 */
-	constructor()
-	{
-		this.express = express();
-		this.port = process.env.PORT || 3000;
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-		this.express.set("views", path.join(__dirname, "../public/views"));
-		this.express.set("view engine", "html");
-
-		this.initializeRoutes();
-		this.express.listen(this.port, () => console.log(`Server listening on port ${this.port}`));
-	}
-
-	/**
-	 * Initialize the express application routes
-	 */
-	initializeRoutes()
-	{
-		// Static
-		this.express.use("/", express.static("/var/www/html"));
-
-		// Home
-		this.express.route("/").get(HomeController.getInstance().index.bind(HomeController.getInstance()));
-	}
-}
-
-const app = new App();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
