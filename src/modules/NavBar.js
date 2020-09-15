@@ -2,65 +2,44 @@ import React from "react";
 import "../css/App.scss";
 
 // Core Components
-import { AppBar, Toolbar, Button, IconButton } from "@material-ui/core";
+import {
+    AppBar,
+    Toolbar,
+    Typography,
+    Button,
+    IconButton,
+} from "@material-ui/core";
 
 // Icon Components
 import InvertColorsIcon from "@material-ui/icons/InvertColors";
 
-function NavBar() {
+export default function NavBar()
+{
     return (
         <>
-            <AppBar color="default">
+            <AppBar color="default" position="sticky">
                 <Toolbar>
-                    <Button
-                        color="inherit"
-                        style={{ marginright: 8 + "px" }}
-                        href="#"
-                    >
-                        Home
-                    </Button>
-                    <Button
-                        color="inherit"
-                        style={{ marginright: 8 + "px" }}
-                        href="#"
-                    >
-                        About Me
-                    </Button>
-                    <Button
-                        color="inherit"
-                        style={{ marginright: 8 + "px" }}
-                        href="#"
-                    >
-                        Experience
-                    </Button>
-                    <Button
-                        color="inherit"
-                        style={{ marginright: 8 + "px" }}
-                        href="#"
-                    >
-                        Education
-                    </Button>
-                    <Button
-                        color="inherit"
-                        style={{ marginright: 8 + "px" }}
-                        href="#"
-                    >
-                        Portfolio
-                    </Button>
-                    <Button
-                        color="inherit"
-                        style={{ marginright: 8 + "px" }}
-                        href="#"
-                    >
-                        Contact
-                    </Button>
-                    <IconButton aria-label="theme" color="inherit">
-                        <InvertColorsIcon />
-                    </IconButton>
+                    {/*
+                        I only have this typography to move the
+                        buttons to the right side of the navbar.
+                        
+                        TODO: Change this so I don't need to have this
+                        Typography component here.
+                    */}
+                    <Typography type="title" color="inherit" style={{ flex: 1 }}></Typography>
+                    <header>
+                        <Button href="#">Home</Button>
+                        <Button href="#">About Me</Button>
+                        <Button href="#">Experience</Button>
+                        <Button href="#">Education</Button>
+                        <Button href="#">Portfolio</Button>
+                        <Button href="#">Contact</Button>
+                        <IconButton aria-label="theme" color="inherit">
+                            <InvertColorsIcon />
+                        </IconButton>
+                    </header>
                 </Toolbar>
             </AppBar>
         </>
     );
 }
-
-export default NavBar;

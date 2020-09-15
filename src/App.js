@@ -3,15 +3,18 @@ import React from "react";
 // Core Components
 import NavBar from "./modules/NavBar";
 
-function App() {
+export default function App()
+{
     return (
         <>
             <div className="App" style={{ flexgrow: 1 }}>
-                {/* Navigation Bar */}
                 <NavBar />
+                <body>
+                    <section>
+
+                    </section>
+                </body>
             </div>
         </>
     );
 }
-
-export default App;
