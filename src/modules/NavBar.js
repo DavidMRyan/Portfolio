@@ -12,12 +12,13 @@ import {
 
 // Icon Components
 import InvertColorsIcon from "@material-ui/icons/InvertColors";
+import MenuButtonIcon from "@material-ui/icons/Menu";
 
 export default function NavBar()
 {
     return (
         <>
-            <AppBar color="default" position="sticky">
+            <AppBar color="default">
                 <Toolbar>
                     {/*
                         I only have this typography to move the
@@ -28,14 +29,21 @@ export default function NavBar()
                     */}
                     <Typography type="title" color="inherit" style={{ flex: 1 }}></Typography>
                     <header>
-                        <Button href="#">Home</Button>
-                        <Button href="#">About Me</Button>
-                        <Button href="#">Experience</Button>
-                        <Button href="#">Education</Button>
-                        <Button href="#">Portfolio</Button>
-                        <Button href="#">Contact</Button>
-                        <IconButton aria-label="theme" color="inherit">
+                        {/* 
+                            TODO: Remove the ripple effect when the
+                            buttons are clicked (especially the menu button)
+                        */}
+                        <Button href="#" hidden>Home</Button>
+                        <Button href="#" hidden>About Me</Button>
+                        <Button href="#" hidden>Experience</Button>
+                        <Button href="#" hidden>Education</Button>
+                        <Button href="#" hidden>Portfolio</Button>
+                        <Button href="#" hidden>Contact</Button>
+                        <IconButton aria-label="theme" color="inherit" hidden="false">
                             <InvertColorsIcon />
+                        </IconButton>
+                        <IconButton class="navbar-menu-button" aria-label="theme" color="inherit" hidden>
+                            <MenuButtonIcon />
                         </IconButton>
                     </header>
                 </Toolbar>
