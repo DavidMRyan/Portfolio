@@ -4,7 +4,7 @@
   "private": true,
   "description": "A website for my portfolio. [CHANGE LATER]",
   "main": "src/server.js",
-  "homepage": "https://DavidMRyan.github.io/PortfolioWebsite",
+  "homepage": "https://DavidMRyan.github.io/Portfolio",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
