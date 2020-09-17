@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/App.scss";
+import Utility from "../utility"
 
 // Core Components
 import {
@@ -33,12 +34,12 @@ export default function NavBar()
                             TODO: Remove the ripple effect when the
                             buttons are clicked (especially the menu button)
                         */}
-                        <Button href="#" hidden>Home</Button>
-                        <Button href="#" hidden>About Me</Button>
-                        <Button href="#" hidden>Experience</Button>
-                        <Button href="#" hidden>Education</Button>
-                        <Button href="#" hidden>Portfolio</Button>
-                        <Button href="#" hidden>Contact</Button>
+                        <Button onClick={() => Utility.scrollToElement("home")} hidden>Home</Button>
+                        <Button onClick={() => Utility.scrollToElement("about-me")} hidden>About Me</Button>
+                        <Button onClick={() => Utility.scrollToElement("experience")} hidden>Experience</Button>
+                        <Button onClick={() => Utility.scrollToElement("education")} hidden>Education</Button>
+                        <Button onClick={() => Utility.scrollToElement("portfolio")} hidden>Portfolio</Button>
+                        <Button onClick={() => Utility.scrollToElement("contact")} hidden>Contact</Button>
                         <IconButton aria-label="theme" color="inherit" hidden="false">
                             <InvertColorsIcon />
                         </IconButton>

@@ -6,6 +6,10 @@ body {
     outline: none !important;
 }
 
+footer {
+    background-color: #616161;
+}
+
 .read-more {
     position: relative;
     padding-top: 12%;
@@ -30,6 +34,23 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
     font-weight: 1;
+}
+
+.body-heading-light {
+    padding-top: 5%;
+    font-family: 'Gravity-Book', sans-serif;
+    font-size: 52px;
+    font-weight: 1;
+    color: #2e2e2e;
+}
+
+.body-text-light {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 1;
+    color: #5e5e5e;
 }
 
 .nameplate {
