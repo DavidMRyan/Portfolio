@@ -1,5 +1,7 @@
 body {
     background-color: #e3e2e1;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
 }
 
 *:focus {
@@ -44,13 +46,35 @@ footer {
     color: #2e2e2e;
 }
 
-.body-text-light {
+.body-text-light-centered {
     padding-left: 5%;
     padding-right: 5%;
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
     font-weight: 1;
     color: #5e5e5e;
+}
+
+.body-text-light-bulleted {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 1;
+    color: #5e5e5e;
+    text-align: left;
+}
+
+.bulleted-nav {
+    padding-left: 20%;
+}
+
+.bulleted-nav-heading {
+    margin-top: -5px;
+    padding-left: 2%;
+    letter-spacing: 2px;
+    text-align: left;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    color: #2e2e2e;
 }
 
 .nameplate {
@@ -61,6 +85,12 @@ footer {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+
+.copyright {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #bababa;
 }
 
 @media only screen and (max-width: 667px) {

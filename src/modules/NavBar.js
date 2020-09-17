@@ -37,7 +37,7 @@ export default function NavBar()
                         <Button onClick={() => Utility.scrollToElement("home")} hidden>Home</Button>
                         <Button onClick={() => Utility.scrollToElement("about-me")} hidden>About Me</Button>
                         <Button onClick={() => Utility.scrollToElement("experience")} hidden>Experience</Button>
-                        <Button onClick={() => Utility.scrollToElement("education")} hidden>Education</Button>
+                        <Button onClick={() => Utility.scrollToElement("education", - 75)} hidden>Education</Button>
                         <Button onClick={() => Utility.scrollToElement("portfolio")} hidden>Portfolio</Button>
                         <Button onClick={() => Utility.scrollToElement("contact")} hidden>Contact</Button>
                         <IconButton aria-label="theme" color="inherit" hidden="false">
