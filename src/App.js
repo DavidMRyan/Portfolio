@@ -6,7 +6,7 @@ import Utility from "./utility"
 import { 
     Button,
     Grid,
-    clsx,
+    // clsx,
     Typography,
     IconButton,
     Card,
@@ -14,15 +14,18 @@ import {
     CardMedia,
     CardContent,
     CardActions,
-    Collapse,
-    TextField
+    // Collapse,
 } from "@material-ui/core";
-import NavBar from "./modules/NavBar";
 
 // Icon Components
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ShareIcon from "@material-ui/icons/Share";
-import GitHubIcon from "@material-ui/icons/GitHub";
+
+// Modules
+import NavBar from "./modules/NavBar";
+import ParallaxDivider from "./modules/ParallaxDivider";
+import Footer from "./modules/Footer";
+import Contact from "./modules/Contact";
 
 // Constant Variables
 const parallaxBg = "https://ultrawidewallpapers.com/wp-content/uploads/2018/06/apple-mojave-night-3440x1440.jpg";
@@ -66,9 +69,7 @@ export default function App()
                         </h2>
                     </section>
 
-                    <Parallax bgImage={parallaxBg} strength={parallaxStr}>
-                        <section style={{height: "25vh"}}/>
-                    </Parallax>
+                   <ParallaxDivider />
                     
                     {/* Experience */}
                     <section id="experience" style={{height: divHeight, textAlign: "center"}}>
@@ -140,6 +141,8 @@ export default function App()
                             </Grid>
                         </nav>
                     </section>
+
+                    {/* Education */}
                     <section id="education" style={{height: divHeight, textAlign: "center", marginTop: "-400px"}}>
                         <article style={{marginTop: "-175px"}}>
                             <h1 class="body-heading-light" style={{paddingTop: "12%"}}>EDUCATION</h1>
@@ -186,9 +189,7 @@ export default function App()
                         </article>
                     </section>
 
-                    <Parallax bgImage={parallaxBg} strength={parallaxStr}>
-                        <section style={{ height: "25vh"}} />
-                    </Parallax>
+                    <ParallaxDivider />
                     
                     {/* Portfolio (All Public Repositories) */}
                     <section id="portfolio" style={{height: "60vh", textAlign: "center"}}>
@@ -211,16 +212,6 @@ export default function App()
                                         <IconButton aria-label="share">
                                             <ShareIcon />
                                         </IconButton>
-                                        {/* <IconButton
-                                            className={clsx({expand}, {
-                                                [{expandOpen}]: expanded,
-                                            })}
-                                            onClick={handleExpandClick}
-                                            aria-expanded={expanded}
-                                            aria-label="show more"
-                                        >
-                                            <ExpandMoreIcon />
-                                        </IconButton> */}
                                    </CardActions>
                                 </Card>
                             </Grid>
@@ -242,16 +233,6 @@ export default function App()
                                         <IconButton aria-label="share">
                                             <ShareIcon />
                                         </IconButton>
-                                        {/* <IconButton
-                                            className={clsx({expand}, {
-                                                [{expandOpen}]: expanded,
-                                            })}
-                                            onClick={handleExpandClick}
-                                            aria-expanded={expanded}
-                                            aria-label="show more"
-                                        >
-                                            <ExpandMoreIcon />
-                                        </IconButton> */}
                                    </CardActions>
                                 </Card>
                             </Grid>
@@ -273,16 +254,6 @@ export default function App()
                                         <IconButton aria-label="share">
                                             <ShareIcon />
                                         </IconButton>
-                                        {/* <IconButton
-                                            className={clsx({expand}, {
-                                                [{expandOpen}]: expanded,
-                                            })}
-                                            onClick={handleExpandClick}
-                                            aria-expanded={expanded}
-                                            aria-label="show more"
-                                        >
-                                            <ExpandMoreIcon />
-                                        </IconButton> */}
                                    </CardActions>
                                 </Card>
                             </Grid>
@@ -304,16 +275,6 @@ export default function App()
                                         <IconButton aria-label="share">
                                             <ShareIcon />
                                         </IconButton>
-                                        {/* <IconButton
-                                            className={clsx({expand}, {
-                                                [{expandOpen}]: expanded,
-                                            })}
-                                            onClick={handleExpandClick}
-                                            aria-expanded={expanded}
-                                            aria-label="show more"
-                                        >
-                                            <ExpandMoreIcon />
-                                        </IconButton> */}
                                    </CardActions>
                                 </Card>
                             </Grid>
@@ -321,32 +282,10 @@ export default function App()
                     </section>
 
                     {/* Contact (Name, Email, Subject, Message) */}
-                    <section id="contact" style={{height: "75vh"}}>
-                        <h1 class="body-heading-light" style={{textAlign: "center"}}>CONTACT</h1>
-                        <div style={{paddingLeft: "15%", paddingRight: "15%", marginTop: "-25px"}}>
-                            <TextField required id="name-text-field" label="Name" type="search" fullWidth/>
-                            <TextField required id="email-text-field" label="Email Address" type="search" fullWidth/>
-                            <TextField required id="subject-text-field" label="Subject" type="search" fullWidth/>
-                            <TextField id="message-text-field" label="Message" type="search" fullWidth
-                                multiline rows={4} variant="outlined" style={{marginTop: "10px"}} color="inherit"
-                            />
-                            <Button variant="contained" style={{ marginTop: "10px"}}>Send</Button>
-                        </div>
-                    </section>
+                    <Contact />
 
                     {/* Webpage Footer (Social Media & Copyright Information) */}
-                    <footer style={{height: "15vh", textAlign: "center"}}>
-                        <small class="copyright">
-                            &copy; Copyright 2018-{new Date().getFullYear()}, David Ryan. All Rights Reserved
-                        </small>
-                        <IconButton style={{color: "#bababa"}} href="https://github.com/DavidMRyan" target="_blank">
-                            <GitHubIcon/>
-                        </IconButton>
-                    </footer>
-
-                    <Parallax bgImage={parallaxBg} strength={parallaxStr}>
-                        <section style={{height: "20vh"}} />
-                    </Parallax>
+                    <Footer />
                 </body>
             </div>
         </>
