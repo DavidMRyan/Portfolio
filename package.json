@@ -21,9 +21,7 @@
     "react-parallax": "^3.0.3",
     "react-scripts": "3.4.3"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
