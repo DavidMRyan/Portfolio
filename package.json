@@ -48,11 +48,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DavidMRyan/PortfolioWebsite.git"
+    "url": "git+https://github.com/DavidMRyan/Portfolio.git"
   },
   "author": "David Ryan",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/DavidMRyan/PortfolioWebsite/issues"
+    "url": "https://github.com/DavidMRyan/Portfolio/issues"
   }
 }
