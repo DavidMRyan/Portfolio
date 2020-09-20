@@ -14,16 +14,14 @@ const githubIconColor = "#bababa";
 export default function Footer()
 {
     return (
-        <>
-            <footer style={{height: footerHeight, textAlign: "center"}}>
-                <small class="copyright">
-                    &copy; Copyright 2018-{new Date().getFullYear()}, David Ryan. All Rights Reserved
-                </small>
+        <footer style={{height: footerHeight, textAlign: "center"}}>
+            <small class="copyright">
+                &copy; Copyright 2018-{new Date().getFullYear()}, David Ryan. All Rights Reserved
+            </small>
 
-                <IconButton style={{color: githubIconColor}} href="https://github.com/DavidMRyan" target="_blank">
-                    <GitHubIcon/>
-                </IconButton>
-            </footer>
-        </>
+            <IconButton style={{color: githubIconColor}} href="https://github.com/DavidMRyan" target="_blank">
+                <GitHubIcon/>
+            </IconButton>
+        </footer>
     );
 }
