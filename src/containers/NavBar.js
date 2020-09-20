@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/App.scss";
+import "../App.scss";
 import Utility from "../utility"
 
 // Core Components

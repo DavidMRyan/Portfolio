@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/App.scss";
+import "../App.scss";
 
 // Core Components
 import { TextField, Button } from "@material-ui/core";
