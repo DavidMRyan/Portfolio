@@ -22,7 +22,11 @@ export default function Portfolio()
     return (
         <section class="portfolio-container" id="portfolio">
             <h2 class="section-header">PORTFOLIO</h2>
-            <Grid class="portfolio-grid-container" container spacing={3}>
+            {/*
+                TODO: Use the 'portfolio-grid-container" class in 'Portfolio.scss'
+                Read 'Footer.js' for more information on why this doesn't work.
+            */}
+            <Grid container spacing={3} style={{paddingLeft: "5%", paddingRight: "5%"}}>
                 <Grid item xs>
                     <Card>
                         <CardHeader title="Test Card Header Title" subheader="September 17, 2020">
