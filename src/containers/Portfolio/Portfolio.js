@@ -1,9 +1,7 @@
 import React from "react";
-import "./Style.scss";
+import "../Style.scss";
 import "./Portfolio.scss"
-
-// Core Components
-import { 
+import {
     Grid,
     Typography,
     IconButton,
@@ -13,15 +11,13 @@ import {
     CardContent,
     CardActions,
 } from "@material-ui/core";
-
-// Icon Components
 import ShareIcon from "@material-ui/icons/Share";
 
 export default function Portfolio()
 {
     return (
-        <section class="portfolio-container" id="portfolio">
-            <h2 class="section-header">PORTFOLIO</h2>
+        <section class="container portfolio" id="portfolio">
+            <h2 class="container-header">PORTFOLIO</h2>
             {/*
                 TODO: Use the 'portfolio-grid-container" class in 'Portfolio.scss'
                 Read 'Footer.js' for more information on why this doesn't work.

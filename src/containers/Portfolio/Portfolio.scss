@@ -1,0 +1,9 @@
+.portfolio {
+    height: 60vh;
+    text-align: center;
+
+    #{&}-grid-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

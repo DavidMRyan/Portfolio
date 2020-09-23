@@ -1,12 +1,12 @@
 import React from "react";
-import "./Style.scss";
+import "../Style.scss";
 
 export default function AboutMe()
 {
     return (
-        <section class="section-container" id="about-me">
-            <h2 class="section-header">ABOUT ME</h2>
-            <p class="section-paragraph">
+        <section class="container" id="about-me">
+            <h2 class="container-header">ABOUT ME</h2>
+            <p class="container-paragraph">
                 Hello there! My name is David, and over the past 4 years I have been
                 actively learning how to program. I first discovered my love for web and 
                 software development back on a game called Call of Duty 4, creating custom levels 

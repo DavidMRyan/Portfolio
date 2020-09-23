@@ -1,5 +1,5 @@
 import React from "react";
-import "./Style.scss";
+import "../Style.scss";
 import "./Contact.scss";
 
 // Core Components
@@ -8,8 +8,8 @@ import { TextField, Button } from "@material-ui/core";
 export default function Contact()
 {
     return (
-        <section class="contact-container" id="contact">
-            <h2 class="section-header">CONTACT</h2>
+        <section class="container contact" id="contact">
+            <h2 class="container-header">CONTACT</h2>
             <section class="contact-form-container">
                 <TextField required id="name-text-field" label="Name" type="search" fullWidth/>
                 <TextField required id="email-text-field" label="Email Address" type="search" fullWidth/>
@@ -18,10 +18,10 @@ export default function Contact()
                     multiline rows={4} variant="outlined" style={{marginTop: "10px"}} color="inherit"
                 />
                 {/*
-                    TODO: Create a button class for contact,
-                    instead of using inline styling.
+                    TODO: Use the 'contact-send-button' class
+                    See 'Footer.js' for more information.
                 */}
-                <Button variant="contained" style={{ marginTop: "10px"}}>Send</Button>
+                <Button variant="contained" style={{marginTop: 10 + "px"}}>Send</Button>
             </section>
         </section>
     );

@@ -1,22 +1,20 @@
 import React from "react";
 
-// Custom Components
-import ParallaxDivider from "./components/ParallaxDivider";
-
-// Containers
-import Navbar from "./containers/Navbar";
-import Nameplate from "./containers/Nameplate";
-import AboutMe from "./containers/AboutMe";
-import Experience from "./containers/Experience";
-import Education from "./containers/Education";
-import Portfolio from "./containers/Portfolio";
-import Contact from "./containers/Contact";
-import Footer from "./containers/Footer";
+import ParallaxDivider from "./components/ParallaxDivider/ParallaxDivider";
+import Navbar from "./containers/Navbar/Navbar";
+import Nameplate from "./containers/Nameplate/Nameplate";
+import AboutMe from "./containers/AboutMe/AboutMe";
+import Experience from "./containers/Experience/Experience";
+import Education from "./containers/Education/Education";
+import Portfolio from "./containers/Portfolio/Portfolio";
+import Contact from "./containers/Contact/Contact";
+import Footer from "./containers/Footer/Footer";
 
 export default function App()
 {
     return (
-        <div className="App" style={{ flexgrow: 1 }}>
+        
+        <div className="App" class="app-flexgrow">
             <Navbar />
             <Nameplate />
             <AboutMe />

@@ -1,0 +1,15 @@
+.education {
+    margin-top: -350px;
+
+    #{&}-article {
+        margin-top: -175px;
+    }
+
+    #{&}-header {
+        padding-top: 12%;
+    }
+
+    // #{&}-paragraph {
+    //     margin-top: -50px;
+    // }
+}

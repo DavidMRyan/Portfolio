@@ -10,7 +10,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 export default function Footer()
 {
     return (
-        <footer>
+        <footer class="footer">
             <small class="copyright">
                 &copy; Copyright 2018-{new Date().getFullYear()}, David Ryan. All Rights Reserved
             </small>

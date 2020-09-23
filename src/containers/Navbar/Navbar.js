@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.scss";
-import Utility from "../utility"
+import Utility from "../../utility"
 
 // Core Components
 import {
@@ -20,17 +20,10 @@ export default function NavBar()
     return (
         <AppBar color="default">
             <Toolbar>
-                {/*
-                    I only have this typography to move the
-                    buttons to the right side of the navbar.
-                    
-                    TODO: Change this so I don't need to have this
-                    Typography component here.
-                */}
-                <Typography class="navbar-title" type="title" color="inherit">
+                <Typography class="navbar" type="title" color="inherit">
                     David Ryan
                 </Typography>
-                <header>
+                <header class="navbar">
                     {/* 
                         TODO: Remove the ripple effect when the
                         buttons are clicked (especially the menu button)
