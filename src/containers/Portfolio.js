@@ -1,5 +1,6 @@
 import React from "react";
-import "../App.scss";
+import "./Style.scss";
+import "./Portfolio.scss"
 
 // Core Components
 import { 
@@ -19,9 +20,9 @@ import ShareIcon from "@material-ui/icons/Share";
 export default function Portfolio()
 {
     return (
-        <section id="portfolio" style={{height: "60vh", textAlign: "center"}}>
-            <h1 class="body-heading-light">PORTFOLIO</h1>
-            <Grid container spacing={3} style={{paddingLeft: "5%", paddingRight: "5%"}}>
+        <section class="portfolio-container" id="portfolio">
+            <h2 class="section-header">PORTFOLIO</h2>
+            <Grid class="portfolio-grid-container" container spacing={3}>
                 <Grid item xs>
                     <Card>
                         <CardHeader title="Test Card Header Title" subheader="September 17, 2020">
@@ -42,7 +43,6 @@ export default function Portfolio()
                         </CardActions>
                     </Card>
                 </Grid>
-
                 <Grid item xs>
                     <Card>
                         <CardHeader title="Test Card Header Title" subheader="September 17, 2020">
@@ -63,7 +63,6 @@ export default function Portfolio()
                         </CardActions>
                     </Card>
                 </Grid>
-
                 <Grid item xs>
                     <Card>
                         <CardHeader title="Test Card Header Title" subheader="September 17, 2020">
@@ -84,7 +83,6 @@ export default function Portfolio()
                         </CardActions>
                     </Card>
                 </Grid>
-
                 <Grid item xs>
                     <Card>
                         <CardHeader title="Test Card Header Title" subheader="September 17, 2020">

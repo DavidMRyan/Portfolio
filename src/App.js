@@ -4,7 +4,7 @@ import React from "react";
 import ParallaxDivider from "./components/ParallaxDivider";
 
 // Containers
-import NavBar from "./containers/NavBar";
+import Navbar from "./containers/Navbar";
 import Nameplate from "./containers/Nameplate";
 import AboutMe from "./containers/AboutMe";
 import Experience from "./containers/Experience";
@@ -17,7 +17,7 @@ export default function App()
 {
     return (
         <div className="App" style={{ flexgrow: 1 }}>
-            <NavBar />
+            <Navbar />
             <Nameplate />
             <AboutMe />
             <ParallaxDivider />

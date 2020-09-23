@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.scss";
+import "./Navbar.scss";
 import Utility from "../utility"
 
 // Core Components
@@ -27,7 +27,9 @@ export default function NavBar()
                     TODO: Change this so I don't need to have this
                     Typography component here.
                 */}
-                <Typography type="title" color="inherit" style={{ flex: 1 }}></Typography>
+                <Typography class="navbar-title" type="title" color="inherit">
+                    David Ryan
+                </Typography>
                 <header>
                     {/* 
                         TODO: Remove the ripple effect when the
