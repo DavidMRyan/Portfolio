@@ -1,19 +1,19 @@
 import React from "react";
+import { Parallax } from "react-parallax";
+import { Button } from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
 import "../Style.scss";
 import "./Nameplate.scss";
 import Utility from "../../utility"
-
-import { Button } from "@material-ui/core";
-import { Parallax } from "react-parallax";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 export default function Nameplate()
 {
     return (
         <Parallax bgImage="https://i.imgur.com/iWbnNbb.jpg" strength="750">
             <section class="container nameplate" id="home">
-                <h1 class="nameplate-heading">DAVID RYAN</h1>
-                <h2 class="nameplate-subheading">Computer Science Student &<br/>Self-Taught Software Developer</h2>
+                <h1 class="nameplate-header">DAVID RYAN</h1>
+                <h2 class="nameplate-subheader">Computer Science Student &<br/>Self-Taught Software Developer</h2>
 
                 <h2 class="read-more">Read More</h2>
                 {/* 

@@ -1,4 +1,5 @@
 import React from "react";
+import CssBaseline from "@material-ui/core/CssBaseline"
 
 import ParallaxDivider from "./components/ParallaxDivider/ParallaxDivider";
 import Navbar from "./containers/Navbar/Navbar";
@@ -13,8 +14,8 @@ import Footer from "./containers/Footer/Footer";
 export default function App()
 {
     return (
-        
-        <div className="App" class="app-flexgrow">
+        <div className="App" class="flex-grow">
+            <CssBaseline />
             <Navbar />
             <Nameplate />
             <AboutMe />

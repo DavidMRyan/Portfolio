@@ -1,12 +1,14 @@
 import React from "react";
+import { Typography } from "@material-ui/core";
+
 import "../Style.scss";
 
 export default function AboutMe()
 {
     return (
         <section class="container" id="about-me">
-            <h2 class="container-header">ABOUT ME</h2>
-            <p class="container-paragraph">
+            <Typography class="container-header" component="h2">ABOUT ME</Typography>
+            <Typography class="container-paragraph" component="p">
                 Hello there! My name is David, and over the past 4 years I have been
                 actively learning how to program. I first discovered my love for web and 
                 software development back on a game called Call of Duty 4, creating custom levels 
@@ -17,7 +19,7 @@ export default function AboutMe()
                 Fast forward to the present day I am enrolled in my second year of college and am working 
                 my way words obtaining my bachelor's degree in computer science. My ultimate goal is to be
                 an exceptionally well rounded developer who is able to reach new heights with modern technology.
-            </p>
+            </Typography>
         </section>
     );
 }

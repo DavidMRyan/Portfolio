@@ -1,11 +1,8 @@
 import React from "react";
-import "./Footer.scss";
-
-// Core Components
 import { IconButton } from "@material-ui/core";
-
-// Icon Components
 import GitHubIcon from "@material-ui/icons/GitHub";
+
+import "./Footer.scss";
 
 export default function Footer()
 {

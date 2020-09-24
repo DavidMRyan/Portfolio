@@ -1,15 +1,18 @@
 import React from "react";
+import {
+    TextField,
+    Button,
+    Typography
+} from "@material-ui/core";
+
 import "../Style.scss";
 import "./Contact.scss";
-
-// Core Components
-import { TextField, Button } from "@material-ui/core";
 
 export default function Contact()
 {
     return (
         <section class="container contact" id="contact">
-            <h2 class="container-header">CONTACT</h2>
+            <Typography class="container-header" component="h2">CONTACT</Typography>
             <section class="contact-form-container">
                 <TextField required id="name-text-field" label="Name" type="search" fullWidth/>
                 <TextField required id="email-text-field" label="Email Address" type="search" fullWidth/>

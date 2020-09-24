@@ -1,8 +1,10 @@
 .navbar {
-    flex: 1;
-    padding-left: 3%;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
+
+    // #{&}-header {
+    //     padding-left: 3%;
+    // }
 
     @media only screen and (max-width: 667px) {
         #{&}-menu-button {
