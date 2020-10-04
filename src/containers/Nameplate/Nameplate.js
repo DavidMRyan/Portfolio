@@ -14,7 +14,7 @@ import Utility from "../../utility"
 export default function Nameplate()
 {
     return (
-        <Parallax bgImage="https://i.imgur.com/iWbnNbb.jpg" strength="750">
+        <Parallax bgImage={require("../../assets/img/nameplate.jpg")} strength="750">
             <Grid className="nameplate" id="home" container
                 direction="column" justify="center" alignItems="center"
             >

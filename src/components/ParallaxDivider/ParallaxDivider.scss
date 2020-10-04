@@ -1,3 +1,9 @@
+@import "../../Responsive.scss";
+
 .parallax-divider {
-    height: 128px;
+    height: 175px;
+
+    @include media(tablet_mobile, portrait) {
+        height: 128px;
+    }
 }
