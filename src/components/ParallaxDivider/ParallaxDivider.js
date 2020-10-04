@@ -11,7 +11,7 @@ export default function ParallaxDivider()
 {
     return (
         <Parallax bgImage={parallaxBg} strength={parallaxStr}>
-            <section class="parallax-divider" />
+            <section className="parallax-divider" />
         </Parallax>
     );
 }

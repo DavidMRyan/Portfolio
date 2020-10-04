@@ -17,13 +17,9 @@ import "./Portfolio.scss"
 export default function Portfolio()
 {
     return (
-        <section class="container portfolio" id="portfolio">
-            <Typography class="container-header" component="h2">PORTFOLIO</Typography>
-            {/*
-                TODO: Use the 'portfolio-grid-container" class in 'Portfolio.scss'
-                Read 'Footer.js' for more information on why this doesn't work.
-            */}
-            <Grid container spacing={3} style={{paddingLeft: "5%", paddingRight: "5%"}}>
+        <Grid className="portfolio" id="portfolio" container direction="row" justify="center">
+            <Typography className="portfolio-header" component="h2">PORTFOLIO</Typography>
+            <Grid className="list portfolio-grid-container" container justify="space-around" spacing={3}>
                 <Grid item xs>
                     <Card>
                         <CardHeader title="Test Card Header Title" subheader="September 17, 2020">
@@ -105,6 +101,6 @@ export default function Portfolio()
                     </Card>
                 </Grid>
             </Grid>
-        </section>
+        </Grid>
     );
 }

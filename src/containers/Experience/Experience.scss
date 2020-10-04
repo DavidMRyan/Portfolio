@@ -1,4 +1,21 @@
+@import "../../Responsive.scss";
+
 .experience {
+    padding-top: 3%;
+    padding-bottom: 3%;
     padding-left: 15%;
     padding-right: 15%;
+    text-align: center;
+
+    #{&}-header {
+        padding-top: 3%;
+        font-size: 4.2em;
+        font-family: 'Gravity-Book', sans-serif;
+        font-weight: 1;
+        color: #2e2e2e;
+
+        @include media(tablet_mobile, portrait) {
+            font-size: 3em;
+        }
+    }
 }

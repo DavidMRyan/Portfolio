@@ -10,15 +10,17 @@ import {
 } from "@material-ui/core";
 
 import "./Navbar.scss";
+import "../../App.scss"
+import "../../Responsive.scss"
 import Utility from "../../utility"
 
-export default function NavBar()
+export default function Navbar()
 {
     return (
         <AppBar color="default">
             <Toolbar>
-                <Typography class="navbar-header" style={{flex: 1}} type="title" color="inherit" />
-                <header class="navbar">
+                <nav className="navbar">
+                    <Typography style={{flex: 1}} type="title" color="inherit" />   
                     {/* 
                         TODO: Remove the ripple effect when the
                         buttons are clicked (especially the menu button)
@@ -26,16 +28,20 @@ export default function NavBar()
                     <Button onClick={() => Utility.scrollToElement("home")} hidden>Home</Button>
                     <Button onClick={() => Utility.scrollToElement("about-me")} hidden>About Me</Button>
                     <Button onClick={() => Utility.scrollToElement("experience")} hidden>Experience</Button>
-                    <Button onClick={() => Utility.scrollToElement("education", - 75)} hidden>Education</Button>
+                    <Button onClick={() => Utility.scrollToElement("education")} hidden>Education</Button>
                     <Button onClick={() => Utility.scrollToElement("portfolio")} hidden>Portfolio</Button>
                     <Button onClick={() => Utility.scrollToElement("contact")} hidden>Contact</Button>
                     <IconButton aria-label="theme" color="inherit" hidden>
                         <InvertColorsIcon />
                     </IconButton>
-                    <IconButton class="navbar-menu-button" aria-label="theme" color="inherit" hidden>
+                    {/*
+                        TODO: Fix the button so its on the right
+                        side of the navbar once again.
+                    */}
+                    <IconButton className="navbar-menu-button" aria-label="theme" color="inherit" hidden>
                         <MenuButtonIcon />
                     </IconButton>
-                </header>
+                </nav>
             </Toolbar>
         </AppBar>
     );

@@ -9,11 +9,5 @@ body {
 }
 
 .flex-grow {
-    flex-grow: 1;
-}
-
-@media only screen and (max-width: 667px) {
-    [hidden] {
-        display: none !important;
-    }
+    flex-grow: 1 !important;
 }

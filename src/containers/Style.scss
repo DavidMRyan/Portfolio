@@ -1,43 +1,28 @@
-.container {
-    height: 100vh;
-    text-align: center;
-
-    #{&}-header {
-        padding-top: 5%;
-        font-family: 'Gravity-Book', sans-serif;
-        font-size: 52px;
-        font-weight: 1;
-        color: #2e2e2e;
-    }
-
-    #{&}-paragraph {
-        padding-left: 10%;
-        padding-right: 10%;
-        font-family: 'Roboto', sans-serif;
-        font-size: 32px;
-        font-weight: 1;
-        color: #5e5e5e;
-    }
-}
+@import "../Responsive.scss";
 
 .list {
-    padding-left: 10%;
-    padding-right: 10%;
-
     #{&}-header {
         text-align: center;
         margin-top: -5px;
         letter-spacing: 2px;
-        font-size: 22px;
+        font-size: 2em;
         font-family: 'Roboto', sans-serif;
         color: #2e2e2e;
+        
+        @include media(tablet_mobile, portrait) {
+            font-size: 1.75em;
+        }
     }
 
     #{&}-paragraph {
         text-align: left;
+        font-size: 1.5em;
         font-family: 'Roboto', sans-serif;
-        font-size: 20px;
         font-weight: 1;
         color: #5e5e5e;
+
+        @include media(tablet_mobile, portrait) {
+            font-size: 1.2em;
+        }
     }
 }
