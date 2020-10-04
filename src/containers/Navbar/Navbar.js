@@ -19,8 +19,7 @@ export default function Navbar()
     return (
         <AppBar color="default">
             <Toolbar>
-                <nav className="navbar">
-                    <Typography style={{flex: 1}} type="title" color="inherit" />   
+                    <Typography className="navbar" type="title" color="inherit" />
                     {/* 
                         TODO: Remove the ripple effect when the
                         buttons are clicked (especially the menu button)
@@ -34,14 +33,10 @@ export default function Navbar()
                     <IconButton aria-label="theme" color="inherit" hidden>
                         <InvertColorsIcon />
                     </IconButton>
-                    {/*
-                        TODO: Fix the button so its on the right
-                        side of the navbar once again.
-                    */}
-                    <IconButton className="navbar-menu-button" aria-label="theme" color="inherit" hidden>
+
+                    {/* <IconButton aria-label="theme" color="inherit">
                         <MenuButtonIcon />
-                    </IconButton>
-                </nav>
+                    </IconButton> */}
             </Toolbar>
         </AppBar>
     );
