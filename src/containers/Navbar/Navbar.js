@@ -95,10 +95,10 @@ export const Navbar = () =>
     return (
         <AppBar className="navbar" color="default" component="nav">
             <Toolbar>
-                {isTabletOrMobileDevice || isPortrait ? mobileNavbar : desktopNavbar}
-                <IconButton aria-label="theme" color="inherit" hidden>
+                <IconButton aria-label="theme" color="inherit">
                     <InvertColorsIcon />
                 </IconButton>
+                {isTabletOrMobileDevice || isPortrait ? mobileNavbar : desktopNavbar}
             </Toolbar>
         </AppBar>
     );
