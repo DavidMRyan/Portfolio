@@ -5,7 +5,9 @@ import {
     AppBar,
     Toolbar,
     Button,
-    Menu, withStyles
+    Menu,
+    createMuiTheme,
+    ThemeProvider
 } from "@material-ui/core";
 import Utility from "../../utility";
 import { useMediaQuery } from "react-responsive";
@@ -13,23 +15,21 @@ import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
 import "./Navbar.scss";
 
-export const NavbarMenu = withStyles({
-    paper: {
-        position: "absolute",
-        backgroundColor: "#f5f5f5",
-        width: "100%",
-        padding: 0,
-        margin: 0,
-        left: 0,
-        right: 0
-    },
-})((props) => (
-    <Menu elevation={0} getContentAnchorEl={null} className={"navbar-paper"}
-          anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
-          transformOrigin={{vertical: 'top', horizontal: 'center'}}
-          {...props}
-    />
-));
+const menuTheme = createMuiTheme({
+    overrides: {
+        MuiMenu: {
+            paper: {
+                backgroundColor: "#f5f5f5",
+                position: "absolute",
+                top: "56px !important",
+                left: "0 !important",
+                width: "100%",
+                maxWidth: "100%",
+                borderRadius: 0
+            }
+        }
+    }
+});
 
 /**
  * @TODO: Remove the ripple effect when the buttons are clicked (especially the menu button)
@@ -75,13 +75,15 @@ export const Navbar = () =>
                 <MenuButtonIcon />
             </IconButton>
             <section>
-                <NavbarMenu id="customized-menu" anchorEl={anchorEl}
-                      keepMounted open={Boolean(anchorEl)}
-                      onClose={handleClose}>
-                    <Grid container direction={"column"} justify={"center"} alignItems={"center"}>
-                        {links}
-                    </Grid>
-                </NavbarMenu>
+                <ThemeProvider theme={menuTheme}>
+                    <Menu id="customized-menu" disableScrollLock className={"navbar-paper"} anchorEl={anchorEl}
+                          keepMounted open={Boolean(anchorEl)}
+                          onClose={handleClose}>
+                        <Grid container direction={"column"} justify={"center"} alignItems={"center"}>
+                            {links}
+                        </Grid>
+                    </Menu>
+                </ThemeProvider>
             </section>
         </Grid>
     );
