@@ -28,6 +28,7 @@ class App
 	{
 		// Static
 		this.express.use("/", express.static("/var/www/html"));
+		this.express.use("/", express.static(path.join(__dirname, "../../build")));
 
 		// Home
 		this.express
