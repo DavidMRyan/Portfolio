@@ -37,8 +37,8 @@ class App
  * HTTPS server.
  */
 const server = https.createServer({
-    // key: readFileSync(path.join(__dirname, "../certs/#.key")),
-    // cert: readFileSync(path.join(__dirname, "../certs/#.crt"))
+    key: readFileSync(path.join(__dirname, "../certs/davidryancs.key")),
+    cert: readFileSync(path.join(__dirname, "../certs/davidryancs.crt"))
 }, new App().app);
 server.listen(443);
 
