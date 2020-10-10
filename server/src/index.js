@@ -1,6 +1,7 @@
 const express = require("express");
 const https = require("https");
 const http = require("http");
+const fs = require("fs");
 const path = require("path");
 const HomeController = require("./controllers/home");
 
@@ -37,8 +38,8 @@ class App
  * HTTPS server.
  */
 const server = https.createServer({
-    key: readFileSync(path.join(__dirname, "../certs/davidryancs.key")),
-    cert: readFileSync(path.join(__dirname, "../certs/davidryancs.crt"))
+    key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.key")),
+    cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.crt"))
 }, new App().app);
 server.listen(443);
 
