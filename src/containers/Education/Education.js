@@ -19,22 +19,19 @@ export default function Education()
                         enrolled in the Computer Science (CSAS) Transfer program; I plan to transfer to Binghamton
                         University to finish this program and obtain my bachelor's degree.
                     </Typography>
-                    {/*
-                        TODO: Fix bulleted list centering!
-                    */}
                         <Grid container justify="space-around">
-                            <Grid item xs sm>
+                            <Grid item xs={3}>
                             <section className="list">
-                                <Typography className="list-header" component="h3">High School Credits</Typography>
+                                <Typography className="list-header" component="h3">High School Credentials</Typography>
                                 <ul>
                                     <li><Typography className="list-paragraph" component="p">Computer Science 1 & 2</Typography></li>
                                     <li><Typography className="list-paragraph" component="p">AP Computer Science</Typography></li>
                                 </ul>
                             </section>
                             </Grid>
-                            <Grid item xs sm>
+                            <Grid item xs={3}>
                             <section className="list">
-                                <Typography className="list-header" component="h3">College Credits</Typography>
+                                <Typography className="list-header" component="h3">College Credentials</Typography>
                                 <ul>
                                     <li><Typography className="list-paragraph" component="p">Problem Solving & Communication Tools</Typography></li>
                                     <li><Typography className="list-paragraph" component="p">Computer Concepts and Applications</Typography></li>
