@@ -32,8 +32,8 @@ class App
 
 // HTTPS & SSL Certificate Setup
 const server = https.createServer({
-    key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.key")),
-    cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.crt"))
+    // key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.key")),
+    // cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.crt"))
 }, new App().app);
 server.listen(443);
 
