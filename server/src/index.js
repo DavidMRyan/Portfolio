@@ -7,9 +7,7 @@ const HomeController = require("./controllers/home");
 
 class App 
 {
-	/**
-	 * Express application constructor
-	 */
+	// Express application constructor
 	constructor() 
 	{
 		this.express = express();
@@ -20,9 +18,7 @@ class App
 		this.initializeRoutes();
 	}
 
-	/**
-	 * Initialize the express application routes
-	 */
+	// Initialize the express application routes
 	initializeRoutes() 
 	{
 		// Static
@@ -34,33 +30,22 @@ class App
 	}
 }
 
-/**
- * HTTPS server.
- */
+// HTTPS & SSL Certificate Setup
 const server = https.createServer({
     key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.key")),
     cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.crt"))
 }, new App().app);
 server.listen(443);
 
-/**
- * HTTP server redirect to HTTPS.
- */
+// HTTP Redirect
 http.createServer((req, res) => 
 {
     res.writeHead(301, { "Location": "https://" + req.headers["host"] + req.url });
     res.end();
 }).listen(80);
 
-/**
- * HTTPS server error callback. 
- */
+// Error Callback
 server.on("error", (e) => { console.log("Error starting server" + e); });
 
-/**
- * HTTPS server listening callback.
- */
-server.on("listening", () => 
-{
-	console.log(`Server started on port ${443} on env ${process.env.NODE_ENV}`);
-});
+// Server-Listening Callback
+server.on("listening", () => { console.log(`Server started on port ${443} on env ${process.env.NODE_ENV}`); });
