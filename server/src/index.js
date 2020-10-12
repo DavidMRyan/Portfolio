@@ -35,10 +35,10 @@ class App
 
 // HTTPS & SSL Certificate Setup
 const server = https.createServer({
-    key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs_com.p7b")),
-	cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs_com.crt"))
+    key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs_com.key")),
+	cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs_com.crt")),
 }, new App().express);
-server.listen(process.env.PORT); // TODO: Change this to port 443
+server.listen(process.env.PORT);
 
 // HTTP Redirect
 // http.createServer((req, res) => 
@@ -51,7 +51,9 @@ server.listen(process.env.PORT); // TODO: Change this to port 443
 server.on("error", (e) => { console.log("Error starting server" + e); });
 
 // Server-Listening Callback
-server.on("listening", () => { console.log(`Server started on port ${process.env.PORT} on NODE_ENV ${process.env.NODE_ENV}`); });
+server.on("listening", () => {
+	console.log(`Server started on PORT[${process.env.PORT}] on NODE_ENV[${process.env.NODE_ENV}]`);
+});
 
 function sendEmail(from, email, subject, text)
 {
