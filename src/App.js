@@ -16,6 +16,7 @@ import Portfolio from "./containers/Portfolio/Portfolio";
 import Contact from "./containers/Contact/Contact";
 import Footer from "./containers/Footer/Footer";
 import "./Responsive.scss";
+import "./App.scss";
 
 let theme = responsiveFontSizes(createMuiTheme());
 
