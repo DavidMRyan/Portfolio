@@ -1,6 +1,6 @@
 const dotenv = require("dotenv").config({ path: ".env.local" });
 const express = require("express");
-// const https = require("https");
+const https = require("https");
 const http = require("http");
 const path = require("path");
 const fs = require("fs");
@@ -34,20 +34,18 @@ class App
 }
 
 // HTTPS & SSL Certificate Setup
-// const server = https.createServer({
-//     // key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.key")),
-//     // cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.crt"))
-// }, new App().express);
-// server.listen(process.env.PORT); // TODO: Change this to port 443
+const server = https.createServer({
+    key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs_com.p7b")),
+	cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs_com.crt"))
+}, new App().express);
+server.listen(process.env.PORT); // TODO: Change this to port 443
 
 // HTTP Redirect
-const server = http.createServer((req, res) => 
-{
-	res.writeHead(200);
-    // res.writeHead(301, { "Location": "https://" + req.headers["host"] + req.url });
-    // res.end();
-}, new App().express)
-server.listen(3000);
+// http.createServer((req, res) => 
+// {
+//     res.writeHead(301, { "Location": "https://" + req.headers["host"] + req.url });
+//     res.end();
+// }).listen(80);
 
 // Error Callback
 server.on("error", (e) => { console.log("Error starting server" + e); });
