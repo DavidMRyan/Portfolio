@@ -4,7 +4,7 @@ import { Parallax } from "react-parallax";
 import "./ParallaxDivider.scss";
 
 // Constant Variables
-const parallaxBg = require("../../assets/img/nameplate.jpg");
+const parallaxBg = require("../../assets/img/parallax.jpg");
 const parallaxStr = 750;
 
 export default function ParallaxDivider()
