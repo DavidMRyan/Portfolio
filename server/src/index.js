@@ -1,8 +1,11 @@
+const dotenv = require("dotenv").config({ path: ".env.local" });
 const express = require("express");
-const https = require("https");
+// const https = require("https");
 const http = require("http");
-const fs = require("fs");
 const path = require("path");
+const fs = require("fs");
+const nodemailer = require("nodemailer");
+
 const HomeController = require("./controllers/home");
 
 class App 
@@ -31,21 +34,43 @@ class App
 }
 
 // HTTPS & SSL Certificate Setup
-const server = https.createServer({
-    // key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.key")),
-    // cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.crt"))
-}, new App().app);
-server.listen(443);
+// const server = https.createServer({
+//     // key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.key")),
+//     // cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs.crt"))
+// }, new App().express);
+// server.listen(process.env.PORT); // TODO: Change this to port 443
 
 // HTTP Redirect
-http.createServer((req, res) => 
+const server = http.createServer((req, res) => 
 {
-    res.writeHead(301, { "Location": "https://" + req.headers["host"] + req.url });
-    res.end();
-}).listen(80);
+	res.writeHead(200);
+    // res.writeHead(301, { "Location": "https://" + req.headers["host"] + req.url });
+    // res.end();
+}, new App().express)
+server.listen(3000);
 
 // Error Callback
 server.on("error", (e) => { console.log("Error starting server" + e); });
 
 // Server-Listening Callback
-server.on("listening", () => { console.log(`Server started on port ${443} on env ${process.env.NODE_ENV}`); });
+server.on("listening", () => { console.log(`Server started on port ${process.env.PORT} on NODE_ENV ${process.env.NODE_ENV}`); });
+
+function sendEmail(from, email, subject, text)
+{
+	let transporter = nodemailer.createTransport({
+		service: "gmail",
+		auth: {
+			user: process.env.NODEMAILER_USERNAME,
+     		pass: process.env.NODEMAILER_PASSWORD,
+		}
+	});
+
+	let info = transporter.sendMail({
+		from: from + "<" + email + ">",
+		to: "davidryan0119@gmail.com",
+		subject: subject,
+		text: text,
+	});
+
+	console.log("[" + new Date().toISOString() +  "] Message Sent: %s", info.messageId);
+}
