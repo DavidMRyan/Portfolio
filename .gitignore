@@ -4,3 +4,4 @@ build/
 .eslintrc
 README.md
 .idea/
+.env.local
