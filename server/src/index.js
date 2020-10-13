@@ -41,11 +41,11 @@ const server = https.createServer({
 server.listen(process.env.PORT);
 
 // HTTP Redirect
-// http.createServer((req, res) => 
-// {
-//     res.writeHead(301, { "Location": "https://" + req.headers["host"] + req.url });
-//     res.end();
-// }).listen(80);
+http.createServer((req, res) => 
+{
+    res.writeHead(301, { "Location": "https://" + req.headers["host"] + req.url });
+    res.end();
+}).listen(80);
 
 // Error Callback
 server.on("error", (e) => { console.log("Error starting server" + e); });
@@ -66,7 +66,7 @@ function sendEmail(from, email, subject, text)
 	});
 
 	let info = transporter.sendMail({
-		from: from + "<" + email + ">",
+		from: from + " <" + email + ">",
 		to: "davidryan0119@gmail.com",
 		subject: subject,
 		text: text,
