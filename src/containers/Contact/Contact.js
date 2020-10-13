@@ -18,7 +18,7 @@ export default function Contact()
                 <TextField required id="email-text-field" label="Email Address" type="search" fullWidth/>
                 <TextField required id="subject-text-field" label="Subject" type="search" fullWidth/>
                 <TextField id="message-text-field" label="Message" type="search" fullWidth
-                    multiline rows={4} variant="outlined" style={{marginTop: "10px"}} color="inherit"
+                    multiline rows={4} variant="outlined" style={{marginTop: "10px"}}
                 />
                 {/* 
 
