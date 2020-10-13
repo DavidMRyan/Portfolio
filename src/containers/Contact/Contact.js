@@ -5,7 +5,6 @@ import {
     Typography
 } from "@material-ui/core";
 
-import index from "../../../server/src/index";
 import "../Style.scss";
 import "./Contact.scss";
 
@@ -21,15 +20,13 @@ export default function Contact()
                 <TextField id="message-text-field" label="Message" type="search" fullWidth
                     multiline rows={4} variant="outlined" style={{marginTop: "10px"}} color="inherit"
                 />
-                <Button className="contact-send-button" variant="contained" 
-                onClick={index.sendEmail(
-                    document.getElementById("name-text-field").innerText,
-                    document.getElementById("email-text-field").innerText,
-                    document.getElementById("subject-text-field").innerText,
-                    document.getElementById("message-text-field").innerText
-                )}>
-                    Send
-                </Button>
+                {/* 
+
+                    TODO: Send the text-field innerText to the nodeMailer module,
+                    in order to properly send emails.
+
+                */}
+                <Button className="contact-send-button" variant="contained">Send</Button>
             </section>
         </section>
     );
