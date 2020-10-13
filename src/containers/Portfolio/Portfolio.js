@@ -20,7 +20,7 @@ export default function Portfolio()
         <Grid className="portfolio" id="portfolio" container direction="row" justify="center">
             <Typography className="portfolio-header" component="h2">PORTFOLIO</Typography>
             <Grid className="list portfolio-grid-container" container justify="space-around" spacing={3}>
-                <Grid item xs>
+                <Grid item sm={12} md={6} lg={3}>
                     <Card>
                         <CardHeader title="Test Card Header Title" subheader="September 17, 2020">
                             <CardMedia className="media" image={""} title="Test Media Title"/>
@@ -40,7 +40,7 @@ export default function Portfolio()
                         </CardActions>
                     </Card>
                 </Grid>
-                <Grid item xs>
+                <Grid item sm={12} md={6} lg={3}>
                     <Card>
                         <CardHeader title="Test Card Header Title" subheader="September 17, 2020">
                             <CardMedia className="media" image={""} title="Test Media Title"/>
@@ -60,7 +60,7 @@ export default function Portfolio()
                         </CardActions>
                     </Card>
                 </Grid>
-                <Grid item xs>
+                <Grid item sm={12} md={6} lg={3}>
                     <Card>
                         <CardHeader title="Test Card Header Title" subheader="September 17, 2020">
                             <CardMedia className="media" image={""} title="Test Media Title"/>
@@ -80,7 +80,7 @@ export default function Portfolio()
                         </CardActions>
                     </Card>
                 </Grid>
-                <Grid item xs>
+                <Grid item sm={12} md={6} lg={3}>
                     <Card>
                         <CardHeader title="Test Card Header Title" subheader="September 17, 2020">
                             <CardMedia className="media" image={""} title="Test Media Title"/>
