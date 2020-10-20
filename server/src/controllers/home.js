@@ -1,4 +1,5 @@
 const path = require("path");
+const nodemailer = require("nodemailer");
 
 class HomeController 
 {
@@ -25,6 +26,26 @@ class HomeController
 	index(req, res) 
 	{
 		res.sendFile(path.join(__dirname, "../../../build", "index.html"));
+	}
+
+	async email(req, res)
+	{
+		let transporter = nodemailer.createTransport({
+			service: "gmail",
+			auth: {
+				user: process.env.NODEMAILER_USERNAME,
+				pass: process.env.NODEMAILER_PASSWORD,
+			}
+		});
+
+		let info = await transporter.sendMail({
+			from: req.body.from + "<" + req.body.email + ">",
+			to: "davidryan0119@gmail.com",
+			subject: req.body.subject,
+			text: "<" + req.body.email + ">\n\n" + req.body.text,
+		});
+
+		res.send({ success: info.accepted.length > 0 });
 	}
 }
 

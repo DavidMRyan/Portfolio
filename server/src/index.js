@@ -14,6 +14,8 @@ class App
 	constructor() 
 	{
 		this.express = express();
+		this.express.use(express.urlencoded({extended : true}));
+		this.express.use(express.json());
 
 		this.express.set("views", path.join(__dirname, "../public/views"));
 		this.express.set("view engine", "html");
@@ -30,6 +32,9 @@ class App
 
 		// Home Route
 		this.express.route("/").get(HomeController.getInstance().index.bind(HomeController.getInstance()));
+
+		// Email Route
+		this.express.route("/email").post(HomeController.getInstance().email.bind(HomeController.getInstance()));
 	}
 }
 
@@ -41,11 +46,11 @@ const server = https.createServer({
 server.listen(process.env.PORT);
 
 // HTTP Redirect
-http.createServer((req, res) => 
-{
-    res.writeHead(301, { "Location": "https://www." + req.headers["host"] + req.url });
-    res.end();
-}).listen(80);
+// http.createServer((req, res) => 
+// {
+//     res.writeHead(301, { "Location": "https://www." + req.headers["host"] + req.url });
+//     res.end();
+// }).listen(80);
 
 // Error Callback
 server.on("error", (e) => { console.log("Error starting server" + e); });
