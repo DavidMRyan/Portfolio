@@ -7,8 +7,9 @@
 .navbar-paper {
     @include media(tablet_mobile, portrait) {
         button {
+            width: 100% !important;
             border-radius: 0;
-            border-bottom: 2px solid silver !important;
+            border-bottom: 1px solid #dbdbdb !important;
         }
     }
 }

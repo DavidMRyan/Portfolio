@@ -32,7 +32,6 @@ const menuTheme = createMuiTheme({
 });
 
 /**
- * @TODO: Remove the ripple effect when the buttons are clicked (especially the menu button)
  * @returns {JSX.Element}
  * @constructor
  */
@@ -60,18 +59,18 @@ export const Navbar = () =>
 
     const links = (
         <>
-            <Button onClick={() => onLinkClick("home")}>Home</Button>
-            <Button onClick={() => onLinkClick("about-me")}>About Me</Button>
-            <Button onClick={() => onLinkClick("experience")}>Experience</Button>
-            <Button onClick={() => onLinkClick("education")}>Education</Button>
-            <Button onClick={() => onLinkClick("portfolio")}>Portfolio</Button>
-            <Button onClick={() => onLinkClick("contact")}>Contact</Button>
+            <Button onClick={() => onLinkClick("home")} disableRipple>Home</Button>
+            <Button onClick={() => onLinkClick("about-me")} disableRipple>About Me</Button>
+            <Button onClick={() => onLinkClick("experience")} disableRipple>Experience</Button>
+            <Button onClick={() => onLinkClick("education")} disableRipple>Education</Button>
+            <Button onClick={() => onLinkClick("portfolio")} disableRipple>Portfolio</Button>
+            <Button onClick={() => onLinkClick("contact")} disableRipple>Contact</Button>
         </>
     );
 
     const mobileNavbar = (
         <Grid container direction="row" justify="flex-end" alignItems="center">
-            <IconButton onClick={handleClick} aria-label="theme" color="inherit">
+            <IconButton onClick={handleClick} aria-label="theme" color="inherit" disableRipple>
                 <MenuButtonIcon />
             </IconButton>
             <section>
