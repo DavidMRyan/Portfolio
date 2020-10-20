@@ -31,8 +31,6 @@ export default function CustomizedSnackbars(props)
 			return;
 		setOpen(false);
 	};
-
-	console.log("open: " + open + "\nprops.open: " + props.open);
 	
 	return (
 		<div className={classes.root}>
