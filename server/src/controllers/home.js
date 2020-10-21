@@ -40,7 +40,7 @@ class HomeController
 
 		let info = await transporter.sendMail({
 			from: req.body.from + "<" + req.body.email + ">",
-			to: "davidryan0119@gmail.com",
+			to: "business.davidryancs@gmail.com",
 			subject: req.body.subject,
 			text: "<" + req.body.email + ">\n\n" + req.body.text,
 		});
@@ -49,6 +49,4 @@ class HomeController
 	}
 }
 
-// TODO: This is the ES5 way of doing modules.
-// Switch to using the ES6 way, it's much better.
 module.exports = HomeController;
