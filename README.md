@@ -1,6 +1,6 @@
 <!-- [![AppVeyor](https://img.shields.io/appveyor/build/DavidMRyan/Portfolio)](https://img.shields.io/appveyor/build/DavidMRyan/Portfolio) -->
 [![CodeFactor](https://www.codefactor.io/repository/github/iswenzz/iswenzz.com/badge)](https://www.codefactor.io/repository/github/davidmryan/portfolio)
-![GitHub](https://img.shields.io/github/license/DavidMRyan/Portfolio)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # David M. Ryan's Portfolio Website
 ![](https://i.imgur.com/qJEwx4G.png)
