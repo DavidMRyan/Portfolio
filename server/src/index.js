@@ -62,20 +62,24 @@ server.on("listening", () => {
 
 function sendEmail(from, email, subject, text)
 {
-	let transporter = nodemailer.createTransport({
-		service: "gmail",
-		auth: {
-			user: process.env.NODEMAILER_USERNAME,
-     		pass: process.env.NODEMAILER_PASSWORD,
-		}
-	});
-
-	let info = transporter.sendMail({
-		from: from + " <" + email + ">",
-		to: "davidryan0119@gmail.com",
-		subject: subject,
-		text: text,
-	});
-
-	console.log("[" + new Date().toISOString() +  "] Message Sent: %s", info.messageId);
+	try
+	{
+		let transporter = nodemailer.createTransport({
+			service: "gmail",
+			auth: {
+				user: process.env.NODEMAILER_USERNAME,
+				 pass: process.env.NODEMAILER_PASSWORD,
+			}
+		});
+	
+		let info = transporter.sendMail({
+			from: from + " <" + email + ">",
+			to: "davidryan0119@gmail.com",
+			subject: subject,
+			text: text,
+		});
+	
+		console.log("[" + new Date().toISOString() +  "] Message Sent: %s", info.messageId);
+	}
+	catch(error) { console.log(error.message); }
 }
