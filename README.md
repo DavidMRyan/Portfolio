@@ -1,6 +1,6 @@
 ![AppVeyor](https://img.shields.io/appveyor/build/DavidMRyan/Portfolio)
 # David M. Ryan's Portfolio Website
-![](\src\assets\img\README_Header.png)
+![](https://i.imgur.com/qJEwx4G.png)
 
 # https://www.davidryancs.com/
 
