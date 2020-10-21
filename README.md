@@ -1,4 +1,7 @@
-![AppVeyor](https://img.shields.io/appveyor/build/DavidMRyan/Portfolio)
+<!-- [![AppVeyor](https://img.shields.io/appveyor/build/DavidMRyan/Portfolio)](https://img.shields.io/appveyor/build/DavidMRyan/Portfolio) -->
+[![CodeFactor](https://www.codefactor.io/repository/github/iswenzz/iswenzz.com/badge)](https://www.codefactor.io/repository/github/davidmryan/portfolio)
+![GitHub](https://img.shields.io/github/license/DavidMRyan/Portfolio)
+
 # David M. Ryan's Portfolio Website
 ![](https://i.imgur.com/qJEwx4G.png)
 
