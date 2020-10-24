@@ -96,7 +96,13 @@ export const Navbar = () =>
     return (
         <AppBar className="navbar" color="default" component="nav">
             <Toolbar>
-                <IconButton aria-label="theme" color="inherit">
+                {/* 
+                 *
+                 *  TODO:
+                 *  Implement Dark Mode and and make this not hidden!
+                 * 
+                 */}
+                <IconButton className="invert-color-icon" aria-label="theme" color="inherit">
                     <InvertColorsIcon />
                 </IconButton>
                 {isTabletOrMobileDevice || isPortrait ? mobileNavbar : desktopNavbar}
