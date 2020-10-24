@@ -10,7 +10,7 @@ export default function Footer()
     return (
         <footer className="footer">
             <small className="copyright">
-                &copy; Copyright 2018-{new Date().getFullYear()}, David Ryan. All Rights Reserved
+                &copy; Copyright 2017-{new Date().getFullYear()}, David Ryan. All Rights Reserved
             </small>
             <br/>
             <IconButton className="github-icon" href="https://github.com/DavidMRyan" target="_blank">
