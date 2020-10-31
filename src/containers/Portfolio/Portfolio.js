@@ -18,7 +18,7 @@ export default function Portfolio()
                     <PortfolioCard
                         title="Dead by Daylight Launcher"
                         date="November 23, 2019"
-                        image={require("../../assets/img/Portfolio/DBD-Launcher.png")}
+                        image={require("../../assets/img/Portfolio/DBD-Launcher.jpg")}
                         repository="https://github.com/DavidMRyan/DeadByDaylightLauncher"
                     >
                         This project was initially started when I was really into a video game called Dead by Daylight;  
@@ -34,7 +34,7 @@ export default function Portfolio()
                     <PortfolioCard
                         title="Portfolio Website"
                         date="September 12, 2020"
-                        image={require("../../assets/img/Portfolio/Website-Portfolio.PNG")}
+                        image={require("../../assets/img/Portfolio/Website-Portfolio.jpg")}
                         repository="https://github.com/DavidMRyan/Portfolio"
                     >
                         I started this project in order to create a place to house and showcase all my past and present  
