@@ -49,7 +49,7 @@ export default function Portfolio()
                     <PortfolioCard
                         title="Call of Duty 4 Compile Tools"
                         date="March 10, 2019"
-                        image={require("../../assets/img/Portfolio/404.jpg")}
+                        image={require("../../assets/img/Portfolio/Call-of-Duty-4-Compile-Tools.png")}
                         repository="https://github.com/DavidMRyan/CallofDuty4CompileTools"
                     >
                         The intent of this project was to create a more stable and user-friendly interface for compiling custom 
