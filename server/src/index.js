@@ -42,6 +42,7 @@ class App
 const server = https.createServer({
     key: fs.readFileSync(path.join(__dirname, "../certs/davidryancs_com.key")),
 	cert: fs.readFileSync(path.join(__dirname, "../certs/davidryancs_com.crt")),
+	ca: fs.readFileSync(path.join(__dirname, "../certs/davidryancs_com.ca-bundle"))
 }, new App().express);
 server.listen(process.env.PORT);
 
